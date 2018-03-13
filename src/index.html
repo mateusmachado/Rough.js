@@ -1,0 +1,37 @@
+<html>
+
+<head>
+  <title>RoughJS Basic Showcase</title>
+  <script src="../dist/rough.min.js" type="text/javascript">
+    import rough;
+  </script>
+</head>
+
+<body>
+  <h2>RoughJS Basic Showcase</h2>
+  <canvas id="canvas" width="800" height="600"></canvas>
+
+  <script>
+    const rc = rough.canvas(document.getElementById('canvas'));
+
+    rc.line(60, 60, 190, 60);
+    rc.rectangle(10, 10, 100, 100);
+    rc.rectangle(140, 10, 100, 100, {
+      fill: 'rgba(255,0,0,0.2)',
+      fillStyle: 'solid',
+      roughness: 2
+    });
+    rc.rectangle(10, 130, 100, 100, {
+      fill: 'red',
+      stroke: 'blue',
+      hachureAngle: 60,
+      hachureGap: 10,
+      fillWeight: 5,
+      strokeWidth: 5
+    });
+
+   
+  </script>
+</body>
+
+</html>
